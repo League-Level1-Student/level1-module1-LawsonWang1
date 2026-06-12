@@ -11,6 +11,8 @@ public class RaceCar {
 	private int positionInRace;
 	public boolean damaged = false;
 	
+		
+	
 	/**
 	 * 
 	 * @param brand Brand of race car
@@ -39,7 +41,7 @@ public class RaceCar {
 	 * Checks if car need a pit stop
 	 * @return needsPitStop
 	 */
-	boolean isDamaged() {
+	public boolean isDamaged() {
 		return damaged;
 	}
 	/**

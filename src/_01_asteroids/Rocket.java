@@ -18,14 +18,26 @@ public class Rocket implements GameControlScene {
 	boolean deccelerate = false;
 	boolean fire = false;
 	boolean restart = false;
+	
 
+	
+	public Rocket() {
+		this.x = AsteroidsGame.WIDTH/2;
+		this.y = AsteroidsGame.HEIGHT/2;
+		this.size = 10;
+		this.collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
+	}
+	
+	
+
+	
 	/*
 	 * 2. A constructor does not have a return type and must be named the same as
 	 * the class i.e. public Rocket(){
 	 * 
 	 * In the constructor initialize:
 	 * 
-	 * x = AsteroidsGame.WIDTH / 2 y = AsteroidsGame.HEIGHT / 2 size = 10
+	 * x = AsteroidsGame.WIDTH / 2 ; y = AsteroidsGame.HEIGHT / 2 size = 10
 	 * 
 	 * and
 	 * 
@@ -33,7 +45,12 @@ public class Rocket implements GameControlScene {
 	 * 
 	 * With this you can run the game. use WASD to move and SPACE to fire
 	 */
-
+	public Rocket(int x, int y) {
+		this.x = x;
+		this.y = y;
+		this.size = 10;
+		this.collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
+	}
 	/*
 	 * 3. If we want to be able to choose where to place the rocket we can create a
 	 * constructor that has parameters for x and y we can do this like any other
